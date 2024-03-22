@@ -48,6 +48,7 @@ export function SearchRepoForm({ onSearch }: Props) {
           type='text'
           id='org'
           {...register('org', { required: 'You must enter an organization' })}
+          className={getEditorStyle(errors.org)}
         />
         <ValidationError fieldError={errors.org} />
       </div>
@@ -57,6 +58,7 @@ export function SearchRepoForm({ onSearch }: Props) {
           type='text'
           id='repo'
           {...register('repo', { required: 'You must enter a repository' })}
+          className={getEditorStyle(errors.repo)}
         />
         <ValidationError fieldError={errors.repo} />
       </div>
