@@ -29,6 +29,7 @@ export async function getViewer() {
 
   const body = (await response.json()) as unknown;
   assertIsGetViewerResponse(body);
+  return body.data;
 }
 
 function assertIsGetViewerResponse(
